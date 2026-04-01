@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0E5GFKRF0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-J0E5GFKRF0');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="민소영 포트폴리오 - AI 기반 영상 편집자 | Adobe 전문가 | JTBC·MBC 경력">
+    <title>민소영 포트폴리오 | AI 기반 영상 편집자</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7f7f7;
+            --bg-card: #ffffff;
+            --text-primary: #111111;
+            --text-secondary: #555555;
+            --text-muted: #999999;
+            --accent: #2049ee;
+            --border: rgba(0, 0, 0, 0.09);
+            --border-strong: rgba(0, 0, 0, 0.18);
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.09);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans KR', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 18px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            background: rgba(255, 255, 255, 0.88);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo span {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: #2049ee;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 48px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(0, 0, 0, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            border-radius: 100px;
+            border: 1px solid var(--border-strong);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            animation: fadeInUp 0.7s ease both;
+        }
+
+        .hero-eyebrow .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--text-primary);
+            animation: blink 2s ease-in-out infinite;
+            background: #2049ee;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6.5vw, 5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -3px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.7s ease 0.1s both;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, #111 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto 40px;
+            line-height: 1.9;
+            animation: fadeInUp 0.7s ease 0.2s both;
+        }
+
+        .hero-tools {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 44px;
+            animation: fadeInUp 0.7s ease 0.25s both;
+        }
+
+        .tool-badge {
+            padding: 5px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border-strong);
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+            transition: all 0.25s;
+        }
+
+        .tool-badge:hover {
+            background: #2049ee;
+            color: #fff;
+            border-color: #2049ee;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.7s ease 0.3s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 30px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: #2049ee;
+            color: #fff;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            background: #1a3ecc;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border-strong);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-secondary);
+            transform: translateY(-2px);
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 100px 48px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #2049ee;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 14px;
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 640px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 32px 28px;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #2049ee;
+            opacity: 0;
+            transition: opacity 0.35s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-strong);
+        }
+
+        .skill-card:hover::before {
+            opacity: 1;
+        }
+
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .skill-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.75;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 18px;
+        }
+
+        .skill-tag {
+            padding: 3px 11px;
+            border-radius: 5px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+
+        /* ===== PROJECTS ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            border-radius: 18px;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            transition: all 0.35s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--border-strong);
+        }
+
+        .project-thumb {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thumb-dark-1 {
+            background: linear-gradient(135deg, #111 0%, #333 100%);
+        }
+
+        .thumb-dark-2 {
+            background: linear-gradient(135deg, #222 0%, #555 100%);
+        }
+
+        .thumb-dark-3 {
+            background: linear-gradient(135deg, #1a1a1a 0%, #444 100%);
+        }
+
+        .thumb-dark-4 {
+            background: linear-gradient(135deg, #0a0a0a 0%, #2a2a2a 100%);
+        }
+
+        .project-thumb-icon {
+            font-size: 2.8rem;
+        }
+
+        /* VIDEO URL overlay */
+        .project-video-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-video-overlay {
+            opacity: 1;
+        }
+
+        .play-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            padding: 24px;
+        }
+
+        .project-category {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .project-info h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .project-info p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 18px;
+        }
+
+        /* Video URL input area */
+        .project-url-area {
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+
+        .project-url-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .project-url-input-wrap {
+            display: flex;
+            gap: 8px;
+        }
+
+        .project-url-input {
+            flex: 1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            outline: none;
+            font-size: 0.8rem;
+            font-family: inherit;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            transition: border 0.2s;
+        }
+
+        .project-url-input:focus {
+            border-color: var(--border-strong);
+            background: var(--bg-card);
+        }
+
+        .project-url-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .project-url-save {
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: none;
+            background: var(--text-primary);
+            color: white;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .project-url-save:hover {
+            background: #333;
+        }
+
+        .project-saved-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 7px 14px;
+            border: 1px solid var(--border-strong);
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .project-saved-link:hover {
+            background: #2049ee;
+            color: white;
+        }
+
+        .project-clear-btn {
+            padding: 7px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .project-clear-btn:hover {
+            border-color: var(--border-strong);
+            color: var(--text-primary);
+        }
+
+
+        /* ===== CAREER TIMELINE ===== */
+        .career-section {
+            background: var(--bg-secondary);
+        }
+
+        .career-timeline {
+            max-width: 860px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #2049ee, rgba(32, 73, 238, 0.1));
+        }
+
+        .career-entry {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 36px;
+            position: relative;
+        }
+
+        .career-dot-wrap {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 38px;
+        }
+
+        .career-dot {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2.5px solid #2049ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            box-shadow: 0 0 0 4px rgba(32, 73, 238, 0.08);
+            z-index: 1;
+            flex-shrink: 0;
+        }
+
+        .career-body {
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 28px 32px;
+            transition: all 0.3s ease;
+            margin-bottom: 4px;
+        }
+
+        .career-body:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-strong);
+        }
+
+        .career-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .career-company {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .career-period {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 100px;
+            background: rgba(32, 73, 238, 0.07);
+            border: 1px solid rgba(32, 73, 238, 0.15);
+            color: #2049ee;
+            white-space: nowrap;
+        }
+
+        .career-dept {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .career-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 640px) {
+            .career-cols {
+                grid-template-columns: 1fr;
+            }
+
+            .career-timeline::before {
+                left: 15px;
+            }
+        }
+
+        .career-block-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #2049ee;
+            margin-bottom: 10px;
+        }
+
+        .career-ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .career-ul li {
+            font-size: 0.845rem;
+            color: var(--text-secondary);
+            padding-left: 14px;
+            position: relative;
+            line-height: 1.65;
+        }
+
+        .career-ul li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: #2049ee;
+            font-weight: 700;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-wrapper {
+            max-width: 580px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px 40px;
+        }
+
+        .contact-card p {
+            margin-bottom: 10px;
+        }
+
+        .contact-email {
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 22px;
+            border-radius: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.25s;
+        }
+
+        .contact-link:hover {
+            background: #2049ee;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            text-align: left;
+        }
+
+        .contact-input,
+        .contact-textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--text-primary);
+            transition: all 0.25s;
+        }
+
+        .contact-input:focus,
+        .contact-textarea:focus {
+            outline: none;
+            border-color: #2049ee;
+            box-shadow: 0 0 0 3px rgba(32, 73, 238, 0.1);
+        }
+
+        .contact-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-submit {
+            background: #2049ee;
+            color: #fff;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .contact-submit:hover {
+            background: #1a3ecc;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 36px;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(28px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 64px 20px;
+            }
+
+            .hero {
+                padding: 110px 20px 70px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                padding: 32px 22px;
+            }
+
+            .career-body {
+                padding: 20px 18px;
+            }
+
+            .career-entry {
+                gap: 16px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-logo">민소영<span> | PORTFOLIO</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#career">CAREER</a></li>
+
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="dot"></span> AI 기반 영상 편집자
+            </div>
+            <h1>안녕하세요,<br><em>영상으로 말하는</em><br><span
+                    style="-webkit-text-fill-color:#2049ee; color:#2049ee;">민소영</span>입니다</h1>
+            <p class="hero-sub">
+                아카이브 운영부터 AI 영상 제작까지,<br>
+                콘텐츠의 기획·편집·관리를 아우르는 영상 크리에이터입니다.
+            </p>
+            <div class="hero-tools">
+                <span class="tool-badge">Adobe Premiere Pro</span>
+                <span class="tool-badge">After Effects</span>
+                <span class="tool-badge">Photoshop</span>
+                <span class="tool-badge">Illustrator</span>
+                <span class="tool-badge">AI 영상 제작</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">작업물 보기 ↓</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="section-header fade-in">
+            <span class="section-label">Core Skills</span>
+            <h2 class="section-title">핵심 역량</h2>
+            <p class="section-desc">미디어 현장에서 쌓은 실무 능력과 AI 기반 영상 기술을 결합합니다</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🎬</div>
+                <h3>AI 기반 영상 제작·편집</h3>
+                <p>최신 AI 도구와 Adobe 전문 프로그램을 결합하여 고품질 영상 콘텐츠를 제작하고 편집합니다.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Premiere Pro</span>
+                    <span class="skill-tag">After Effects</span>
+                    <span class="skill-tag">AI 영상 제작</span>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🎨</div>
+                <h3>비주얼 디자인</h3>
+                <p>Adobe Illustrator와 Photoshop을 활용하여 영상 썸네일, 그래픽, 영상 내 자막 디자인 등을 제작합니다.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Illustrator</span>
+                    <span class="skill-tag">Photoshop</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <div class="skill-icon">🗂️</div>
+                <h3>콘텐츠 아카이브 &amp; 운영</h3>
+                <p>콘텐츠 분류 체계 구축, 메타데이터 표준화, 파일 검수 및 운영 일정 관리 전문 역량을 보유합니다.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">메타데이터 관리</span>
+                    <span class="skill-tag">아카이브</span>
+                    <span class="skill-tag">파일 운영</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <div class="skill-icon">📡</div>
+                <h3>방송 실시간 운영 모니터링</h3>
+                <p>뉴스·생방송 환경에서의 실시간 콘텐츠 송출 모니터링 및 파일 검수 경험을 보유하고 있습니다.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">실시간 모니터링</span>
+                    <span class="skill-tag">품질 검수</span>
+                    <span class="skill-tag">생방송 대응</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Career -->
+    <section id="career" class="career-section">
+        <div class="section-header fade-in">
+            <span class="section-label">Career</span>
+            <h2 class="section-title">경력 사항</h2>
+            <p class="section-desc">방송 미디어 현장에서 쌓아온 실무 경험들입니다</p>
+        </div>
+        <div class="career-timeline">
+
+            <!-- 1 -->
+            <div class="career-entry fade-in">
+                <div class="career-dot-wrap">
+                    <div class="career-dot">📺</div>
+                </div>
+                <div class="career-body">
+                    <div class="career-top">
+                        <div class="career-company">JTBC디스커버리 · 편성팀</div>
+                        <span class="career-period">2022.10 – 2024.10</span>
+                    </div>
+                    <div class="career-dept">JTBC GOLF / JTBC GOLF&amp;SPORTS 채널 아카이브 담당</div>
+                    <div class="career-cols">
+                        <div>
+                            <div class="career-block-title">주요 업무</div>
+                            <ul class="career-ul">
+                                <li>프로그램 및 스포츠 경기 영상 메타데이터 정리 및 표준화</li>
+                                <li>콘텐츠 분류 체계 재정비 및 검색 구조 개선</li>
+                                <li>편성 일정 기반 콘텐츠 입출고 및 운영 일정 관리</li>
+                                <li>외부 협력사 대응 및 콘텐츠 자료 제공</li>
+                                <li>영상 자산 관리 및 운영 프로세스 개선</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="career-block-title">성과 및 기여</div>
+                            <ul class="career-ul">
+                                <li>체계화되지 않았던 아카이브 구조를 정비하여 콘텐츠 검색 효율 향상</li>
+                                <li>메타데이터 표준화 작업을 통해 콘텐츠 접근성 및 활용도 개선</li>
+                                <li>일정 기반 운영 체계를 구축하여 콘텐츠 제공의 안정성 확보</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="career-entry fade-in">
+                <div class="career-dot-wrap">
+                    <div class="career-dot">🎬</div>
+                </div>
+                <div class="career-body">
+                    <div class="career-top">
+                        <div class="career-company">JTBC미디어텍 · 제작편집팀</div>
+                        <span class="career-period">2019.08 – 2021.01</span>
+                    </div>
+                    <div class="career-dept">예능·교양 프로그램 촬영본 인제스트 담당</div>
+                    <div class="career-cols">
+                        <div>
+                            <div class="career-block-title">주요 업무</div>
+                            <ul class="career-ul">
+                                <li>촬영본 인제스트 및 파일 검수</li>
+                                <li>촬영본 입고 스케줄 및 데이터 관리</li>
+                                <li>생방송 백상예술대상 녹화 보조</li>
+                                <li>영상 포맷 관리 및 운영 지원</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="career-block-title">기여</div>
+                            <ul class="career-ul">
+                                <li>제작 일정에 차질이 없도록 콘텐츠 흐름 관리</li>
+                                <li>긴박한 생방송 환경에서도 정확성과 속도를 유지하며 운영 안정성 확보</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="career-entry fade-in">
+                <div class="career-dot-wrap">
+                    <div class="career-dot">📡</div>
+                </div>
+                <div class="career-body">
+                    <div class="career-top">
+                        <div class="career-company">MBC · 보도국 뉴미디어 뉴스 편집부</div>
+                        <span class="career-period">2019.05 – 2019.08</span>
+                    </div>
+                    <div class="career-dept">뉴스 콘텐츠 편집 및 포털 업로드 운영 담당</div>
+                    <div class="career-cols">
+                        <div>
+                            <div class="career-block-title">주요 업무</div>
+                            <ul class="career-ul">
+                                <li>라디오 뉴스 편집 및 파일 검수</li>
+                                <li>5시뉴스, 뉴스데스크 실시간 송출 모니터링 및 파일 검수</li>
+                                <li>주요 뉴스 콘텐츠 포털 업로드</li>
+                                <li>콘텐츠 제목·설명 작성 및 정보 배열 관리</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="career-block-title">기여</div>
+                            <ul class="career-ul">
+                                <li>콘텐츠 전달 구조 및 플랫폼 노출 방식 이해</li>
+                                <li>정보 정확성 검수를 통한 서비스 신뢰도 유지 경험 축적</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="career-entry fade-in">
+                <div class="career-dot-wrap">
+                    <div class="career-dot">🎞️</div>
+                </div>
+                <div class="career-body">
+                    <div class="career-top">
+                        <div class="career-company">기타 현장 경험</div>
+                        <span class="career-period">2018</span>
+                    </div>
+                    <div class="career-dept">영화·드라마 현장 참여</div>
+                    <ul class="career-ul">
+                        <li>KBS2 수목드라마 '슈츠' 동시녹음</li>
+                        <li>채널A 주말드라마 '커피야 부탁해', 영화 '아직 사랑하고 있습니까?' 데이터매니저</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="section-header fade-in">
+            <span class="section-label">Projects</span>
+            <h2 class="section-title">작업물</h2>
+            <p class="section-desc">AI 기술과 영상 문법으로 생생하게 구현해 낸 영상 작업물입니다</p>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+
+            <!-- 1 -->
+            <div class="project-card fade-in">
+                <div class="project-thumb thumb-dark-1">
+                    <div class="project-thumb-icon">☕</div>
+                    <a class="project-video-overlay" href="https://youtu.be/sbcor35SHz4" target="_blank">
+                        <span class="play-btn">▶</span>
+                    </a>
+                </div>
+                <div class="project-info">
+                    <div class="project-category">AI-Generated</div>
+                    <h3>카페 '사영' 홍보 영상</h3>
+                    <p>광안리 오션뷰 카페의 분위기와 감성을 담아낸 홍보 영상입니다.</p>
+                    <div class="project-url-area">
+                        <div class="skill-tags" style="margin-top:0;">
+                            <span class="skill-tag">ChatGPT</span>
+                            <span class="skill-tag">Gemini</span>
+                            <span class="skill-tag">Kling 3.0</span>
+                            <span class="skill-tag">Veo 3</span>
+                        </div>
+                        <a href="https://youtu.be/sbcor35SHz4" target="_blank" class="project-saved-link"
+                            style="margin-top:12px; display:inline-flex;">▶ 영상 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="project-card fade-in">
+                <div class="project-thumb thumb-dark-2">
+                    <div class="project-thumb-icon">🍗</div>
+                    <a class="project-video-overlay" href="https://youtu.be/_wKqKD7ps34" target="_blank">
+                        <span class="play-btn">▶</span>
+                    </a>
+                </div>
+                <div class="project-info">
+                    <div class="project-category">AI-Generated</div>
+                    <h3>궁극의 크리스피 행성</h3>
+                    <p>'후라이드 참 잘하는 집' AI 광고 영상 공모전 출품작. 전 과정을 AI로 제작했습니다.</p>
+                    <div class="project-url-area">
+                        <div class="skill-tags" style="margin-top:0;">
+                            <span class="skill-tag">ChatGPT</span>
+                            <span class="skill-tag">Midjourney</span>
+                            <span class="skill-tag">Kling 3.0</span>
+                            <span class="skill-tag">Veo 3</span>
+                            <span class="skill-tag">SUNO</span>
+                            <span class="skill-tag">ElevenLabs</span>
+                        </div>
+                        <a href="https://youtu.be/_wKqKD7ps34" target="_blank" class="project-saved-link"
+                            style="margin-top:12px; display:inline-flex;">▶ 영상 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="project-card fade-in">
+                <div class="project-thumb thumb-dark-3">
+                    <div class="project-thumb-icon">🎵</div>
+                    <a class="project-video-overlay" href="https://youtu.be/Dl0BWzorTsY" target="_blank">
+                        <span class="play-btn">▶</span>
+                    </a>
+                </div>
+                <div class="project-info">
+                    <div class="project-category">AI-Generated</div>
+                    <h3>궁극의 크리스피 행성 CM송</h3>
+                    <p>AI로 작사·작곡한 '후라이드 참 잘하는 집' CM송. 브랜드의 감성을 음악으로 표현했습니다.</p>
+                    <div class="project-url-area">
+                        <div class="skill-tags" style="margin-top:0;">
+                            <span class="skill-tag">ChatGPT</span>
+                            <span class="skill-tag">SUNO</span>
+                        </div>
+                        <a href="https://youtu.be/Dl0BWzorTsY" target="_blank" class="project-saved-link"
+                            style="margin-top:12px; display:inline-flex;">▶ 영상 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="project-card fade-in">
+                <div class="project-thumb thumb-dark-4">
+                    <div class="project-thumb-icon">🎞️</div>
+                    <a class="project-video-overlay" href="https://www.youtube.com/watch?v=TDg9oPnZ78Q" target="_blank">
+                        <span class="play-btn">▶</span>
+                    </a>
+                </div>
+                <div class="project-info">
+                    <div class="project-category">After Effects · Premiere Pro</div>
+                    <h3>AI 광고 영상 공모전 작업 과정</h3>
+                    <p>제작의 기획부터 완성까지 전체 워크플로우를 담은 메이킹 영상입니다.</p>
+                    <div class="project-url-area">
+                        <div class="skill-tags" style="margin-top:0;">
+                            <span class="skill-tag">After Effects</span>
+                            <span class="skill-tag">Premiere Pro</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=TDg9oPnZ78Q" target="_blank" class="project-saved-link"
+                            style="margin-top:12px; display:inline-flex;">▶ 영상 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="project-card fade-in">
+                <div class="project-thumb">
+                    <video src="./assets/5_Illustrator_aep_Lotte.mp4" autoplay loop muted playsinline
+                        style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></video>
+                    <a class="project-video-overlay" href="./assets/5_Illustrator_aep_Lotte.mp4" target="_blank">
+                        <span class="play-btn">▶</span>
+                    </a>
+                </div>
+                <div class="project-info">
+                    <div class="project-category">Motion Graphics</div>
+                    <h3>롯데 자이언츠 모션 그래픽</h3>
+                    <p>Adobe Illustrator와 After Effects를 활용하여 제작한 모션 그래픽 영상입니다.</p>
+                    <div class="project-url-area">
+                        <div class="skill-tags" style="margin-top:0;">
+                            <span class="skill-tag">Illustrator</span>
+                            <span class="skill-tag">After Effects</span>
+                        </div>
+                        <a href="./assets/5_Illustrator_aep_Lotte.mp4" target="_blank" class="project-saved-link"
+                            style="margin-top:12px; display:inline-flex;">▶ 영상 보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-header fade-in">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title">함께 작업해요</h2>
+            <p class="section-desc">새로운 프로젝트와 협업 제안을 기다리고 있습니다</p>
+        </div>
+        <div class="contact-wrapper fade-in">
+            <div class="contact-card">
+                <form class="contact-form fade-in" action="https://formspree.io/f/xgopzopk" method="POST">
+                    <div
+                        style="font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); margin-bottom: -6px;">
+                        To: soyoungmin512@gmail.com
+                    </div>
+                    <input type="email" name="email" class="contact-input" placeholder="답장 받으실 이메일 주소" required>
+                    <textarea name="message" class="contact-textarea" placeholder="문의 사항이나 협업 제안을 남겨주세요"
+                        required></textarea>
+
+                    <button type="submit" class="contact-submit">메시지 보내기 🚀</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 민소영 · AI 기반 영상 편집자 포트폴리오</p>
+    </footer>
+
+    <script>
+
+
+        // Scroll fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Nav background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            nav.style.background = window.scrollY > 50 ? 'rgba(255,255,255,0.96)' : 'rgba(255,255,255,0.88)';
+        });
+
+        // Load saved URLs from localStorage
+        [0, 1, 2].forEach(i => loadUrl(i));
+
+        function saveUrl(i) {
+            const input = document.getElementById('url-input-' + i);
+            const url = input.value.trim();
+            if (!url) { alert('URL을 입력해주세요.'); return; }
+            try { new URL(url); } catch { alert('유효한 URL 형식을 입력해주세요.\n예) https://youtube.com/watch?v=...'); return; }
+            localStorage.setItem('project-url-' + i, url);
+            renderSaved(i, url);
+        }
+
+        function clearUrl(i) {
+            localStorage.removeItem('project-url-' + i);
+            document.getElementById('url-input-' + i).value = '';
+            document.getElementById('url-display-' + i).style.display = 'flex';
+            document.getElementById('url-saved-' + i).style.display = 'none';
+            document.getElementById('overlay-' + i).href = '#';
+        }
+
+        function loadUrl(i) {
+            const url = localStorage.getItem('project-url-' + i);
+            if (url) renderSaved(i, url);
+        }
+
+        function renderSaved(i, url) {
+            const overlay = document.getElementById('overlay-' + i);
+            overlay.href = url;
+            document.getElementById('url-display-' + i).style.display = 'none';
+            const savedEl = document.getElementById('url-saved-' + i);
+            savedEl.style.display = 'flex';
+            savedEl.style.gap = '8px';
+            savedEl.style.alignItems = 'center';
+            savedEl.innerHTML = `
+                <a href="${url}" target="_blank" class="project-saved-link">▶ 영상 보기</a>
+                <button class="project-clear-btn" onclick="clearUrl(${i})">✕ 삭제</button>
+            `;
+        }
+    </script>
+</body>
+
+</html>
